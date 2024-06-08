@@ -200,10 +200,10 @@ border: 1rem solid white;
 .texte-information{
     margin-bottom: 1rem;
 }
-h5{
+.h5{
     font-size: 1rem;
     display: flex;
 }
-h5 .les-points{
+.h5 .les-points{
     margin-right: 1rem;
 }
