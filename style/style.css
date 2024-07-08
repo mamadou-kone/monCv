@@ -33,13 +33,14 @@ body{
 }
 
 .partie-gauche .photo-conteneur{
-    margin-bottom: 2.2rem;
+    margin-top: 0rem;
+    margin-bottom: 2rem;
 }
 
 .partie-gauche .photo-conteneur img{
     width: 100%;
     height: 100%;
-border-radius:50%;
+border-radius:20%;
 border: 1rem solid white;
 }
 
@@ -52,7 +53,7 @@ border: 1rem solid white;
     color: white;
     border-radius: 1rem;
     text-align: center;
-    margin: 1.4rem 0;
+    margin: 1rem 0;
 }
 .icon-conteneur img{
     width: 1.2rem;
