@@ -1,225 +1,377 @@
-/* Importation des polices */
+/* Import des polices */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
-/* Définition des variables CSS */
+
+/* Reset et styles de base */
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-    /* font-family: 'Montserrat', Courier, monospace; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
+body {
     background-color: #ebecf0;
-    font-size: 1rem;
+    font-size: 16px;
+    line-height: 1.6;
 }
 
-.main{
-    width: 210mm;
-    height: 297mm;
-    background-color: white;
-    margin: 0 auto;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    display: flex;
-}
-.partie-gauche{
-    background-color: #f4f4f4;
-    width: 40%;
-    height: 100%;
-    padding: 2.8rem;
-}
-
-.partie-gauche .photo-conteneur{
-    margin-top: 0rem;
-    margin-bottom: 2rem;
-}
-
-.partie-gauche .photo-conteneur img{
+.main {
     width: 100%;
-    height: 100%;
-border-radius:20%;
-border: 1rem solid white;
+    max-width: 210mm;
+    min-height: 297mm;
+    background-color: white;
+    margin: 2rem auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: row;
 }
 
-.titre{
-    font-family: 'Roboto', sans-serif;
-    font-size:0.8rem;
-    text-transform: uppercase;
-    padding: 0.3rem;
-    background-color: #444440;
-    color: white;
-    border-radius: 1rem;
-    text-align: center;
-    margin: 1rem 0;
+/* Partie gauche */
+.partie-gauche {
+    background-color: #f8f9fa;
+    width: 30%;
+    padding: 0.2rem 1.2rem;
 }
-.icon-conteneur img{
+
+.photo-conteneur {
+    margin-bottom: 0.5rem;
+}
+
+.photo-conteneur img {
+    width: 100%;
+    max-width: 130px;
+    height: auto;
+    border-radius: 10px;
+    border: 5px solid white;
+    display: block;
+    margin: 0 auto;
+}
+
+.titre {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    padding: 0.2rem 0.5rem;
+    background-color: #2c3e50;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0.3rem 0;
+}
+
+/* Section contact */
+.contact-conteneur {
+    margin-bottom: 1rem;
+}
+
+.contact-list {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+    font-size: 0.9rem;
+}
+
+.icon-conteneur img {
     width: 1.2rem;
     height: 1.2rem;
 }
-.contact-conteneur{
-    margin-bottom: 2.2rem;
-    font-family: "Roboto";
-}
 
- .contact-conteneur .contact-list{
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    color: #444440;
-    font-size: 0.8rem;
-}
-
-
+/* Section formation */
 .formation-conteneur {
-    margin: 2rem 0;
-    font-family: 'Roboto', sans-serif;
+    margin: 0.9rem 0;
 }
 
-.formation-conteneur .cours{
-    margin-bottom: 1rem;
-    color: #414042;
-}
-
-.formation-conteneur .formation-titre{
-    font-size: 0.9rem;
-    font-weight: 800;
-    margin-bottom: .3rem;
-}
-
-.formation-conteneur  .nom-college{
+.cours {
     margin-bottom: 0.3rem;
-    font-weight: 600;
-    
-    
+    padding-left: 0.5rem;
+    border-left: 3px solid #2c3e50;
 }
 
-.formation-conteneur .formation-date{
+.formation-titre {
     font-size: 0.8rem;
-    
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    color: #2c3e50;
 }
 
-.langue-conteneur .langue{
+.nom-college {
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+}
+
+.formation-date {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* Section langues */
+.langue-conteneur .langue {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 0.6rem;
-    font-family: "Roboto", sans-serif;
+    align-items: center;
+    margin-bottom: 0.7rem;
 }
 
-.langue-conteneur .langue .form{
-    background-color: #bbbbbb;
-    width: 4rem;
-    height: 0.5rem;
-    border-radius: 1rem;
+.langue .form {
+    background-color: #e9ecef;
+    width: 90px;
+    height: 6px;
+    border-radius: 3px;
 }
 
-.langue-conteneur .langue .bar{
-    background-color: #3d3d3d;
+.langue .bar {
+    background-color: #2c3e50;
     height: 100%;
-
-    border-radius: 1rem;
+    border-radius: 3px;
 }
 
-.partie-droite{
-    padding: 5rem 2.2rem;
-    color: #555555;
-    font-family: "Roboto", sans-serif;
-    text-align: justify;
-    line-height: 1.3em;
+/* Partie droite */
+.partie-droite {
+    padding: 1.5rem 2rem;
+    color: #2c3e50;
+    width: 70%;
 }
 
-.partie-droite .banner .prenom{
-    margin-bottom: 0.5rem;
-    font-size: 3rem;
-    color: #555555;
-
-}
-
-.banner P{
-    margin-bottom: 2rem;
-    letter-spacing: 0.3rem;
-    margin-top: 1rem;
-    font-size: 0.8rem;
-}
-
-.partie-droite .banner .nom{
-    font-size: 3rem;
-    color: #555555;
+.banner {
     margin-bottom: 0.5rem;
 }
-.tiret{
-    margin-top: 1rem;
-    background-color: #555555;
-    width: 100%;
-    height: 0.2rem;
+
+.banner .prenom,
+.banner .nom {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 0.1rem;
+}
+
+.banner p {
+    letter-spacing: 0.2rem;
+    font-size: 1rem;
+    color: #666;
+    text-transform: uppercase;
+}
+
+.tiret {
+    height: 3px;
+    background-color: #2c3e50;
+    margin: 0.2rem 0;
+}
+
+.experience {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.langage-conteneur {
+    margin: 0.7rem 0;
+}
+
+.element-langage {
     margin-bottom: 1rem;
-
-}
- .experience{
-    font-size: 1.3rem;
-
 }
 
-.right{
-    margin: 3rem;
+.les-points {
+    width: 8px;
+    height: 8px;
+    background-color: #2c3e50;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+    display: inline-block;
+	gap: 0.5rem;
+    margin: 0.2rem 0;
 }
-.left{
-    margin: 3rem;
+
+.cont-lang {
+    display: flex;
+    gap: 0.5rem;
+    margin: 0.2rem 0;
+}
+
+.left, .right {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 0.2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+}
+
+.left:hover, .right:hover {
+    transform: translateY(-5px);
+}
+
+.title-langage {
+    font-size: 1rem;
+    color: #2c3e50;
+    font-weight: 200;
+    margin-bottom: 0.2rem;
+    padding-bottom: 0.2rem;
+    border-bottom: 2px solid #3498db;
 }
 
 .langage-conteneur {
     display: flex;
-    margin-top: 1rem;
-    
-}
- .oblique-bar{
-    margin-right: 1rem;
-    border: 1px solid #555555 ;
-    width: 0.7rem;
-    height: 5rem;
-    border-radius: 1rem;
-    
-    
-}
-.element-langage{
-    margin-top: -0.3rem;
+    gap: 1rem;
 }
 
-.les-points{
-    background-color: #555555;
-    width: 0.6rem;
-    height: 0.6rem;
-    border-radius: 1rem;
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
-
-}
-
-.langage{
-    margin-top: 0.5rem;
-
-}
-
-.mon-experience .cont-lang{ 
-       display: flex;
-}
-
-
-.texte-information{
-    margin-bottom: 1rem;
-}
-.h5{
-    font-size: 0.8rem;
+.oblique-bar {
     display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 0.1rem;
 }
-.h5 .les-points{
-    margin-right: 1rem;
+
+.les-points {
+    width: 8px;
+    height: 8px;
+    background-color: #3498db;
+    border-radius: 50%;
+    position: relative;
 }
-#cpigCompetence{
-    margin-left: 2rem;
+
+.les-points::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    height: 1.2rem;
+    width: 2px;
+    background-color: #e0e0e0;
+    transform: translateX(-50%);
 }
-#realisation{
-    margin-left: 2rem;
+
+.les-points:last-child::after {
+    display: none;
+}
+
+.element-langage {
+    flex: 1;
+}
+
+.langage {
+    padding: 0.2rem 0.5rem;
+    margin-bottom: 0.2rem;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    color: #2c3e50;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    border-left: 3px solid #3498db;
+}
+
+.langage:hover {
+    background-color: #3498db;
+    color: white;
+    transform: translateX(5px);
+}
+
+/* Style différent pour les frameworks */
+.right .langage {
+    border-left-color: #2ecc71;
+}
+
+.right .les-points {
+    background-color: #2ecc71;
+}
+
+.right .title-langage {
+    border-bottom-color: #2ecc71;
+}
+
+.right .langage:hover {
+    background-color: #2ecc71;
+}
+
+/* Media Queries pour la responsivité */
+@media screen and (max-width: 768px) {
+    .main {
+        flex-direction: column;
+        width: 95%;
+        margin: 1rem auto;
+    }
+
+    .partie-gauche,
+    .partie-droite {
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .banner .prenom,
+    .banner .nom {
+        font-size: 2rem;
+    }
+
+    .photo-conteneur img {
+        max-width: 150px;
+    }
+
+    .cont-lang {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .left, .right {
+        padding: 0.3rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    .partie-gauche,
+    .partie-droite {
+        padding: 1rem;
+    }
+
+    .banner .prenom,
+    .banner .nom {
+        font-size: 1.8rem;
+    }
+
+    .titre {
+        font-size: 0.8rem;
+    }
+
+    .contact-list {
+        font-size: 0.8rem;
+    }
+
+    .title-langage {
+        font-size: 1rem;
+    }
+
+    .langage {
+        font-size: 0.85rem;
+        padding: 0.5rem 0.8rem;
+    }
+
+    .oblique-bar {
+        gap: 1rem;
+    }
+}
+
+/* Animations subtiles */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.main {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Amélioration de l'accessibilité */
+:focus {
+    outline: 2px solid #2c3e50;
+    outline-offset: 2px;
 }
